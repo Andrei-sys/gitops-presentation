@@ -1,0 +1,22 @@
+# Source: http-python-jx/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'http-python-jx'
+  name: http-python-jx
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: http-python-jx
+                port:
+                  number: 80
+      host: http-python-jx-jx-staging.192.168.49.2.nip.io
