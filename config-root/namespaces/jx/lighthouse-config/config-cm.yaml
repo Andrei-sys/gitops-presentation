@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         Andrei-sys/gitops-presentation: true
+        Andrei-sys/http-python-jx: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         Andrei-sys/gitops-presentation: merge
+        Andrei-sys/http-python-jx: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - Andrei-sys/gitops-presentation
+        - Andrei-sys/http-python-jx
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - Andrei-sys/gitops-presentation
+        - Andrei-sys/http-python-jx
       target_url: http://lighthouse-jx.192.168.49.2.nip.io/merge/status
 kind: ConfigMap
 metadata:

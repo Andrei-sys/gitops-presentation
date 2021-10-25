@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: Andrei-sys
+    provider: github
+    repository: http-python-jx
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: andrei-sys-http-python-jx
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/Andrei-sys/http-python-jx.git
+  org: Andrei-sys
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: http-python-jx
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/Andrei-sys/http-python-jx
