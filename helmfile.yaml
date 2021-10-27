@@ -2,7 +2,6 @@ filepath: ""
 helmfiles:
 - path: helmfiles/jx/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
- pr-2629c623-2763-4255-9770-74fb0643af4f
 - path: helmfiles/jx-production/helmfile.yaml
 
 - path: helmfiles/jx-staging/helmfile.yaml
